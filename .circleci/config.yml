@@ -1,0 +1,14 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@5.0.2
+  
+jobs:
+  build:
+    docker:
+      - image: cimg/ruby:3.2
+    steps:
+      - run: echo "heelo"
+      - node/install:
+          install-yarn: true
+
